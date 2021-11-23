@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react"
+import Nav from './components/Nav';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Games from './pages/Games';
+import { games } from "./data";
+import GameInfo from './pages/GameInfo';
+import Cart from './pages/Cart';
+
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  function addToCart(game) {
+    setCart([...cart, { ...game, quantity: 1 }])
+  }
+
+  function changeQuantity(game, quantity) {
+    setCart(
+      cart.map((item) =>
+        item.id === game.id
+          ? {
+            ...item,
+            quantity: +quantity,
+          }
+          : item
+      )
+    );
+  }
+
+  function removeItem(item) {
+    setCart(cart.filter(game => game.id !== item.id))
+    console.log('removeItem', item)
+  }
+
+  function numberOfItems() {
+    let counter = 0;
+    cart.forEach(item => {
+      counter += item.quantity
+    })
+    return counter;
+  }
+
+  useEffect(() => {
+    console.log(cart)
+  }, [cart])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav numberOfItems={numberOfItems()} />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/games" exact element={<Games games={games} />} />
+          <Route path="/games/:id" element={<GameInfo games={games} addToCart={addToCart} />} />
+          <Route path="/cart" element={<Cart games={games} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
