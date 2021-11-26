@@ -289,14 +289,14 @@ HIGHLIGHTS
 */
 
 #highlights {
-  /*position: relative;*/
+  position: relative;
   max-width: 100vw;
   
 }
 
 #highlights:after,
 #highlights:before {
-  background: url("./assets/wave.svg");
+  /*background: url("./assets/wave.svg");*/
   content: "";
   position: absolute;
   width: 101vw;
