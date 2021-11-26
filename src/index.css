@@ -310,6 +310,7 @@ HIGHLIGHTS
 #highlights:before {
   transform: translateY(-100%);
   top: 1px;
+  background: url("./assets/wave.svg");
 }
 
 #highlights:after {
