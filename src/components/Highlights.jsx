@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-import Highlight from './ui/Highlight';
+import Highlight from './ui/Highlight'; //Importing the function code and props from Highlight.jsx
 
 const Highlights = () => {
     return (
@@ -11,6 +11,18 @@ const Highlights = () => {
                         Why choose <span className="orange">Library</span>
                     </h2>
                     <div className="highlight__wrapper">
+
+                        {/* OLD WAY OF WRITING
+                        <div className="highlight">
+                        <div className="highlight__img">
+                            <FontAwesomeIcon icon="bolt" />
+                        </div>
+                        <h3 className="highlight__subtitle">Easy and Quick</h3>
+                        <p className="highlight__para">Get access to the game you purchased online instantly./p>
+                    </div>*/}
+
+
+                        {/* Passes in the props from the Highlight.jsx */}
                         <Highlight
                             icon={<FontAwesomeIcon icon="bolt" />}
                             title="Easy and Quick"

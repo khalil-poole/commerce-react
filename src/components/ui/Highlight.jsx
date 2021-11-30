@@ -1,5 +1,6 @@
 import React from 'react'
 
+/* Lines 4 - 14, will display the Font Awesome Icons, Header Title, and Paragraph */
 const Highlight = ({ icon, title, para }) => {
     return (
         <div className="highlight">

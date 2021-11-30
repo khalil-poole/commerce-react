@@ -1,5 +1,5 @@
 import EmptyCart from '../assets/empty_cart.svg'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; //Renders <a></a> tags within a webpage, HAS to be in hooks
 
 const Cart = ({ cart, changeQuantity, removeItem }) => {
     const total = () => {

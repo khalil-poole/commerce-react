@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom'
-import Rating from './Rating';
-import Price from './Price';
+import { Link } from 'react-router-dom' //Renders <a></a> tags within a webpage, HAS to be in hooks
+import Rating from './Rating'; //Imports the const Rating variable onto the webpage
+import Price from './Price'; //Imports the const Price variable onto the webpage
 
 const Game = ({ game }) => {
     const [img, setImg] = useState();

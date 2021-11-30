@@ -1,7 +1,7 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import LibraryLogo from '../assets/Library.svg';
-import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' //Imports font awesome icons
+import LibraryLogo from '../assets/Library.svg'; //Imports logo svg from the assets folder
+import { Link } from "react-router-dom" //Renders <a></a> tags within a webpage
 
 const Nav = ({ numberOfItems }) => {
     function openMenu() {

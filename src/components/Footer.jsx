@@ -1,7 +1,8 @@
 import React from 'react'
-import Logo from "../assets/Library.svg"
-import { Link } from "react-router-dom"
+import Logo from "../assets/Library.svg" //Imports svg image from the assets folder
+import { Link } from "react-router-dom" //Renders <a></a> tags within a webpage, HAS to be in hooks
 
+/* Function will display the end of page HTML/CSS with links to other parts of the app */
 const Footer = () => {
     return (
         <footer>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+/* Entire function Will display the ratings for each game */
 const Rating = ({ rating }) => {
     return (
         <div className="game__ratings">

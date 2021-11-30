@@ -1,7 +1,8 @@
 import React from 'react'
-import UndrawArcade from '../assets/undraw_old_day_6x25.svg'
-import { Link } from 'react-router-dom'
+import UndrawArcade from '../assets/undraw_old_day_6x25.svg' //Imports svg file from assets folder
+import { Link } from 'react-router-dom' //Renders <a></a> tags within a webpage, HAS to be in hooks
 
+/* Function will load in the landing page */
 const Landing = () => {
     return (
         <section id="landing">
