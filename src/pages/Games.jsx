@@ -17,12 +17,13 @@ const Games = ({ games: initialGames }) => {
         }
         /* How to sort items from lowest rated to highest rated */
         if (filter === 'RATING_LOW') {
+            setGames(games.slice().sort((a, b) => a.rating - b.rating));
+        }
+        if (filter === 'RATING_HIGH') {
             setGames(games.slice().sort((a, b) => b.rating - a.rating));
         }
         /* How to sort items from highest rated to lowest rated */
-        if (filter === 'RATING_HIGH') {
-            setGames(games.slice().sort((a, b) => a.rating - b.rating));
-        }
+
     }
     return (
         <div className="games__body">
@@ -38,8 +39,8 @@ const Games = ({ games: initialGames }) => {
                                     <option value="DEFAULT" disabled selected>Sort</option>
                                     <option value="LOW_TO_HIGH">Price, Low to High</option>
                                     <option value="HIGH_TO_LOW">Price, High to Low</option>
-                                    <option value="RATING_HIGH">Rating, Low to High</option>
-                                    <option value="RATING_LOW">Rating, High to Low</option>
+                                    <option value="RATING_LOW">Rating, Low to High</option>
+                                    <option value="RATING_HIGH">Rating, High to Low</option>
                                 </select>
                             </div>
                             <div className="games">
