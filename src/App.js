@@ -28,11 +28,13 @@ function App() {
     );
   }
 
+  /*Removes an item in the cart */
   function removeItem(item) {
     setCart(cart.filter(game => game.id !== item.id))
     console.log('removeItem', item)
   }
 
+  /*Increases the count of an item being added to the cart */
   function numberOfItems() {
     let counter = 0;
     cart.forEach(item => {

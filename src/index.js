@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { library } from '@fortawesome/fontawesome-svg-core'
+/* Lines 8 and 10, adds Font Awesome Icons universally */
 import { faBars, faShoppingCart, faTimes, faBolt, faGamepad, faTags, faStar, faStarHalfAlt, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faBars, faShoppingCart, faTimes, faBolt, faGamepad, faTags, faStar, faStarHalfAlt, faArrowLeft);
 
+/* Lines 13 - 18, renders React Components into HTML */
 ReactDOM.render(
   <React.StrictMode>
     <App />

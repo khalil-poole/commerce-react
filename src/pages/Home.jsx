@@ -6,6 +6,7 @@ import Highlights from '../components/Highlights';
 import Landing from '../components/Landing';
 import Footer from '../components/Footer';
 
+/* Passes in all of the imported pages as props to be displayed */
 const Home = () => {
     return (
         <>

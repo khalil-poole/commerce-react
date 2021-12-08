@@ -59,8 +59,8 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                                                 ${((game.salePrice || game.originalPrice) * game.quantity).toFixed(2)}
                                             </div>
                                         </div>
-                                    );
-                                })};
+                                    )
+                                })}
 
                             </div>
                             {cart.length === 0 && (
