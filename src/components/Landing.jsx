@@ -8,13 +8,10 @@ const Landing = () => {
         <section id="landing">
             <header>
                 <div className="header__container">
-                    <h1>America's most awarded library platform</h1>
                     <div className="header__description">
 
                         <h2>Find your dream game with <span className="orange">Library</span></h2>
-                        <Link to="#features">
-                            <button className="btn">Browse Games</button>
-                        </Link>
+    
                     </div>
                     <figure className="header__img--wrapper">
                         <img src={UndrawArcade} alt="" />
