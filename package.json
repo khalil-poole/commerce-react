@@ -2,8 +2,8 @@
   "name": "commerce-react",
   "version": "0.1.0",
   "private": true,
-  "engines" : {
-    "node": "20.8.1"
+  "engines": {
+    "node": "6.11.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
