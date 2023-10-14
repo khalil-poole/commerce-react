@@ -10,7 +10,7 @@ const Landing = () => {
                 <div className="header__container">
                     <div className="header__description">
 
-                        <h2>Find your dream game with <span className="orange">Library</span></h2>
+                        <h2>Find your dream game with <span className="orange">Library!</span></h2>
     
                     </div>
                     <figure className="header__img--wrapper">
